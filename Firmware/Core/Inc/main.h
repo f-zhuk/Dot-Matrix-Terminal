@@ -63,6 +63,7 @@ void Error_Handler(void);
 #define MTR_GPIO_Port GPIOC
 #define OPTO_Pin GPIO_PIN_11
 #define OPTO_GPIO_Port GPIOB
+#define OPTO_EXTI_IRQn EXTI15_10_IRQn
 
 /* USER CODE BEGIN Private defines */
 

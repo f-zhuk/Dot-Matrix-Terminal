@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc2DyxQ4.s 			page 1
+ARM GAS  /tmp/ccJQVqb4.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
   30:Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
   31:Core/Src/stm32f1xx_it.c **** 
   32:Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  /tmp/cc2DyxQ4.s 			page 2
+ARM GAS  /tmp/ccJQVqb4.s 			page 2
 
 
   33:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
   75:Core/Src/stm32f1xx_it.c ****   {
   36              		.loc 1 75 10 view .LVU3
   37 0000 FEE7     		b	.L2
-ARM GAS  /tmp/cc2DyxQ4.s 			page 3
+ARM GAS  /tmp/ccJQVqb4.s 			page 3
 
 
   38              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
  100:Core/Src/stm32f1xx_it.c **** {
   73              		.loc 1 100 1 view -0
   74              		.cfi_startproc
-ARM GAS  /tmp/cc2DyxQ4.s 			page 4
+ARM GAS  /tmp/ccJQVqb4.s 			page 4
 
 
   75              		@ Volatile: function does not return.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
  106 0000 FEE7     		b	.L8
  107              		.cfi_endproc
  108              	.LFE68:
-ARM GAS  /tmp/cc2DyxQ4.s 			page 5
+ARM GAS  /tmp/ccJQVqb4.s 			page 5
 
 
  110              		.section	.text.UsageFault_Handler,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
  144              		@ args = 0, pretend = 0, frame = 0
  145              		@ frame_needed = 0, uses_anonymous_args = 0
  146              		@ link register save eliminated.
-ARM GAS  /tmp/cc2DyxQ4.s 			page 6
+ARM GAS  /tmp/ccJQVqb4.s 			page 6
 
 
  146:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 0 */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
  171:Core/Src/stm32f1xx_it.c **** {
  180              		.loc 1 171 1 view -0
  181              		.cfi_startproc
-ARM GAS  /tmp/cc2DyxQ4.s 			page 7
+ARM GAS  /tmp/ccJQVqb4.s 			page 7
 
 
  182              		@ args = 0, pretend = 0, frame = 0
@@ -413,32 +413,87 @@ ARM GAS  /tmp/cc2DyxQ4.s 			page 1
  212 0006 08BD     		pop	{r3, pc}
  213              		.cfi_endproc
  214              	.LFE73:
- 216              		.text
- 217              	.Letext0:
- 218              		.file 2 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  /tmp/cc2DyxQ4.s 			page 8
+ 216              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
+ 217              		.align	1
+ 218              		.global	EXTI15_10_IRQHandler
+ 219              		.syntax unified
+ 220              		.thumb
+ARM GAS  /tmp/ccJQVqb4.s 			page 8
+
+
+ 221              		.thumb_func
+ 223              	EXTI15_10_IRQHandler:
+ 224              	.LFB74:
+ 193:Core/Src/stm32f1xx_it.c **** 
+ 194:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
+ 195:Core/Src/stm32f1xx_it.c **** /* STM32F1xx Peripheral Interrupt Handlers                                    */
+ 196:Core/Src/stm32f1xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
+ 197:Core/Src/stm32f1xx_it.c **** /* For the available peripheral interrupt handler names,                      */
+ 198:Core/Src/stm32f1xx_it.c **** /* please refer to the startup file (startup_stm32f1xx.s).                    */
+ 199:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
+ 200:Core/Src/stm32f1xx_it.c **** 
+ 201:Core/Src/stm32f1xx_it.c **** /**
+ 202:Core/Src/stm32f1xx_it.c ****   * @brief This function handles EXTI line[15:10] interrupts.
+ 203:Core/Src/stm32f1xx_it.c ****   */
+ 204:Core/Src/stm32f1xx_it.c **** void EXTI15_10_IRQHandler(void)
+ 205:Core/Src/stm32f1xx_it.c **** {
+ 225              		.loc 1 205 1 is_stmt 1 view -0
+ 226              		.cfi_startproc
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229 0000 08B5     		push	{r3, lr}
+ 230              	.LCFI1:
+ 231              		.cfi_def_cfa_offset 8
+ 232              		.cfi_offset 3, -8
+ 233              		.cfi_offset 14, -4
+ 206:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+ 207:Core/Src/stm32f1xx_it.c **** 
+ 208:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI15_10_IRQn 0 */
+ 209:Core/Src/stm32f1xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(OPTO_Pin);
+ 234              		.loc 1 209 3 view .LVU30
+ 235 0002 4FF40060 		mov	r0, #2048
+ 236 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+ 237              	.LVL1:
+ 210:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+ 211:Core/Src/stm32f1xx_it.c **** 
+ 212:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI15_10_IRQn 1 */
+ 213:Core/Src/stm32f1xx_it.c **** }
+ 238              		.loc 1 213 1 is_stmt 0 view .LVU31
+ 239 000a 08BD     		pop	{r3, pc}
+ 240              		.cfi_endproc
+ 241              	.LFE74:
+ 243              		.text
+ 244              	.Letext0:
+ 245              		.file 2 "/opt/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h"
+ 246              		.file 3 "/opt/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h"
+ 247              		.file 4 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 248              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  /tmp/ccJQVqb4.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f1xx_it.c
-     /tmp/cc2DyxQ4.s:19     .text.NMI_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:25     .text.NMI_Handler:00000000 NMI_Handler
-     /tmp/cc2DyxQ4.s:42     .text.HardFault_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:48     .text.HardFault_Handler:00000000 HardFault_Handler
-     /tmp/cc2DyxQ4.s:65     .text.MemManage_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:71     .text.MemManage_Handler:00000000 MemManage_Handler
-     /tmp/cc2DyxQ4.s:88     .text.BusFault_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:94     .text.BusFault_Handler:00000000 BusFault_Handler
-     /tmp/cc2DyxQ4.s:111    .text.UsageFault_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:117    .text.UsageFault_Handler:00000000 UsageFault_Handler
-     /tmp/cc2DyxQ4.s:134    .text.SVC_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:140    .text.SVC_Handler:00000000 SVC_Handler
-     /tmp/cc2DyxQ4.s:153    .text.DebugMon_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:159    .text.DebugMon_Handler:00000000 DebugMon_Handler
-     /tmp/cc2DyxQ4.s:172    .text.PendSV_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:178    .text.PendSV_Handler:00000000 PendSV_Handler
-     /tmp/cc2DyxQ4.s:191    .text.SysTick_Handler:00000000 $t
-     /tmp/cc2DyxQ4.s:197    .text.SysTick_Handler:00000000 SysTick_Handler
+     /tmp/ccJQVqb4.s:19     .text.NMI_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:25     .text.NMI_Handler:00000000 NMI_Handler
+     /tmp/ccJQVqb4.s:42     .text.HardFault_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:48     .text.HardFault_Handler:00000000 HardFault_Handler
+     /tmp/ccJQVqb4.s:65     .text.MemManage_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:71     .text.MemManage_Handler:00000000 MemManage_Handler
+     /tmp/ccJQVqb4.s:88     .text.BusFault_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:94     .text.BusFault_Handler:00000000 BusFault_Handler
+     /tmp/ccJQVqb4.s:111    .text.UsageFault_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:117    .text.UsageFault_Handler:00000000 UsageFault_Handler
+     /tmp/ccJQVqb4.s:134    .text.SVC_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:140    .text.SVC_Handler:00000000 SVC_Handler
+     /tmp/ccJQVqb4.s:153    .text.DebugMon_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:159    .text.DebugMon_Handler:00000000 DebugMon_Handler
+     /tmp/ccJQVqb4.s:172    .text.PendSV_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:178    .text.PendSV_Handler:00000000 PendSV_Handler
+     /tmp/ccJQVqb4.s:191    .text.SysTick_Handler:00000000 $t
+     /tmp/ccJQVqb4.s:197    .text.SysTick_Handler:00000000 SysTick_Handler
+     /tmp/ccJQVqb4.s:217    .text.EXTI15_10_IRQHandler:00000000 $t
+     /tmp/ccJQVqb4.s:223    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
 
 UNDEFINED SYMBOLS
 HAL_IncTick
+HAL_GPIO_EXTI_IRQHandler
