@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc02FOe0.s 			page 1
+ARM GAS  /tmp/ccM6OMw5.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
   30:Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
   31:Core/Src/stm32f1xx_it.c **** 
   32:Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  /tmp/cc02FOe0.s 			page 2
+ARM GAS  /tmp/ccM6OMw5.s 			page 2
 
 
   33:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
@@ -86,7 +86,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
   55:Core/Src/stm32f1xx_it.c **** /* USER CODE END 0 */
   56:Core/Src/stm32f1xx_it.c **** 
   57:Core/Src/stm32f1xx_it.c **** /* External variables --------------------------------------------------------*/
-  58:Core/Src/stm32f1xx_it.c **** 
+  58:Core/Src/stm32f1xx_it.c **** extern TIM_HandleTypeDef htim2;
   59:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN EV */
   60:Core/Src/stm32f1xx_it.c **** 
   61:Core/Src/stm32f1xx_it.c **** /* USER CODE END EV */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
   75:Core/Src/stm32f1xx_it.c ****   {
   36              		.loc 1 75 10 view .LVU3
   37 0000 FEE7     		b	.L2
-ARM GAS  /tmp/cc02FOe0.s 			page 3
+ARM GAS  /tmp/ccM6OMw5.s 			page 3
 
 
   38              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  100:Core/Src/stm32f1xx_it.c **** {
   73              		.loc 1 100 1 view -0
   74              		.cfi_startproc
-ARM GAS  /tmp/cc02FOe0.s 			page 4
+ARM GAS  /tmp/ccM6OMw5.s 			page 4
 
 
   75              		@ Volatile: function does not return.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  106 0000 FEE7     		b	.L8
  107              		.cfi_endproc
  108              	.LFE68:
-ARM GAS  /tmp/cc02FOe0.s 			page 5
+ARM GAS  /tmp/ccM6OMw5.s 			page 5
 
 
  110              		.section	.text.UsageFault_Handler,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  144              		@ args = 0, pretend = 0, frame = 0
  145              		@ frame_needed = 0, uses_anonymous_args = 0
  146              		@ link register save eliminated.
-ARM GAS  /tmp/cc02FOe0.s 			page 6
+ARM GAS  /tmp/ccM6OMw5.s 			page 6
 
 
  146:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 0 */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  171:Core/Src/stm32f1xx_it.c **** {
  180              		.loc 1 171 1 view -0
  181              		.cfi_startproc
-ARM GAS  /tmp/cc02FOe0.s 			page 7
+ARM GAS  /tmp/ccM6OMw5.s 			page 7
 
 
  182              		@ args = 0, pretend = 0, frame = 0
@@ -413,16 +413,16 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  212 0006 08BD     		pop	{r3, pc}
  213              		.cfi_endproc
  214              	.LFE73:
- 216              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
+ 216              		.section	.text.TIM2_IRQHandler,"ax",%progbits
  217              		.align	1
- 218              		.global	EXTI15_10_IRQHandler
+ 218              		.global	TIM2_IRQHandler
  219              		.syntax unified
  220              		.thumb
-ARM GAS  /tmp/cc02FOe0.s 			page 8
+ARM GAS  /tmp/ccM6OMw5.s 			page 8
 
 
  221              		.thumb_func
- 223              	EXTI15_10_IRQHandler:
+ 223              	TIM2_IRQHandler:
  224              	.LFB74:
  193:Core/Src/stm32f1xx_it.c **** 
  194:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
@@ -433,9 +433,9 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  199:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
  200:Core/Src/stm32f1xx_it.c **** 
  201:Core/Src/stm32f1xx_it.c **** /**
- 202:Core/Src/stm32f1xx_it.c ****   * @brief This function handles EXTI line[15:10] interrupts.
+ 202:Core/Src/stm32f1xx_it.c ****   * @brief This function handles TIM2 global interrupt.
  203:Core/Src/stm32f1xx_it.c ****   */
- 204:Core/Src/stm32f1xx_it.c **** void EXTI15_10_IRQHandler(void)
+ 204:Core/Src/stm32f1xx_it.c **** void TIM2_IRQHandler(void)
  205:Core/Src/stm32f1xx_it.c **** {
  225              		.loc 1 205 1 is_stmt 1 view -0
  226              		.cfi_startproc
@@ -446,54 +446,109 @@ ARM GAS  /tmp/cc02FOe0.s 			page 1
  231              		.cfi_def_cfa_offset 8
  232              		.cfi_offset 3, -8
  233              		.cfi_offset 14, -4
- 206:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+ 206:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN TIM2_IRQn 0 */
  207:Core/Src/stm32f1xx_it.c **** 
- 208:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI15_10_IRQn 0 */
- 209:Core/Src/stm32f1xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(OPTO_Pin);
+ 208:Core/Src/stm32f1xx_it.c ****   /* USER CODE END TIM2_IRQn 0 */
+ 209:Core/Src/stm32f1xx_it.c ****   HAL_TIM_IRQHandler(&htim2);
  234              		.loc 1 209 3 view .LVU30
- 235 0002 4FF40060 		mov	r0, #2048
- 236 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+ 235 0002 0248     		ldr	r0, .L18
+ 236 0004 FFF7FEFF 		bl	HAL_TIM_IRQHandler
  237              	.LVL1:
- 210:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+ 210:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN TIM2_IRQn 1 */
  211:Core/Src/stm32f1xx_it.c **** 
- 212:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI15_10_IRQn 1 */
+ 212:Core/Src/stm32f1xx_it.c ****   /* USER CODE END TIM2_IRQn 1 */
  213:Core/Src/stm32f1xx_it.c **** }
  238              		.loc 1 213 1 is_stmt 0 view .LVU31
- 239 000a 08BD     		pop	{r3, pc}
- 240              		.cfi_endproc
- 241              	.LFE74:
- 243              		.text
- 244              	.Letext0:
- 245              		.file 2 "/opt/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h"
- 246              		.file 3 "/opt/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h"
- 247              		.file 4 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 248              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  /tmp/cc02FOe0.s 			page 9
+ 239 0008 08BD     		pop	{r3, pc}
+ 240              	.L19:
+ 241 000a 00BF     		.align	2
+ 242              	.L18:
+ 243 000c 00000000 		.word	htim2
+ 244              		.cfi_endproc
+ 245              	.LFE74:
+ 247              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
+ 248              		.align	1
+ 249              		.global	EXTI15_10_IRQHandler
+ 250              		.syntax unified
+ 251              		.thumb
+ 252              		.thumb_func
+ 254              	EXTI15_10_IRQHandler:
+ 255              	.LFB75:
+ 214:Core/Src/stm32f1xx_it.c **** 
+ 215:Core/Src/stm32f1xx_it.c **** /**
+ 216:Core/Src/stm32f1xx_it.c ****   * @brief This function handles EXTI line[15:10] interrupts.
+ 217:Core/Src/stm32f1xx_it.c ****   */
+ARM GAS  /tmp/ccM6OMw5.s 			page 9
+
+
+ 218:Core/Src/stm32f1xx_it.c **** void EXTI15_10_IRQHandler(void)
+ 219:Core/Src/stm32f1xx_it.c **** {
+ 256              		.loc 1 219 1 is_stmt 1 view -0
+ 257              		.cfi_startproc
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 260 0000 08B5     		push	{r3, lr}
+ 261              	.LCFI2:
+ 262              		.cfi_def_cfa_offset 8
+ 263              		.cfi_offset 3, -8
+ 264              		.cfi_offset 14, -4
+ 220:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+ 221:Core/Src/stm32f1xx_it.c **** 
+ 222:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI15_10_IRQn 0 */
+ 223:Core/Src/stm32f1xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(OPTO_Pin);
+ 265              		.loc 1 223 3 view .LVU33
+ 266 0002 4FF40060 		mov	r0, #2048
+ 267 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+ 268              	.LVL2:
+ 224:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+ 225:Core/Src/stm32f1xx_it.c **** 
+ 226:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI15_10_IRQn 1 */
+ 227:Core/Src/stm32f1xx_it.c **** }
+ 269              		.loc 1 227 1 is_stmt 0 view .LVU34
+ 270 000a 08BD     		pop	{r3, pc}
+ 271              		.cfi_endproc
+ 272              	.LFE75:
+ 274              		.text
+ 275              	.Letext0:
+ 276              		.file 2 "/opt/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h"
+ 277              		.file 3 "/opt/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h"
+ 278              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 279              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 280              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 281              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 282              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 283              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  /tmp/ccM6OMw5.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f1xx_it.c
-     /tmp/cc02FOe0.s:19     .text.NMI_Handler:00000000 $t
-     /tmp/cc02FOe0.s:25     .text.NMI_Handler:00000000 NMI_Handler
-     /tmp/cc02FOe0.s:42     .text.HardFault_Handler:00000000 $t
-     /tmp/cc02FOe0.s:48     .text.HardFault_Handler:00000000 HardFault_Handler
-     /tmp/cc02FOe0.s:65     .text.MemManage_Handler:00000000 $t
-     /tmp/cc02FOe0.s:71     .text.MemManage_Handler:00000000 MemManage_Handler
-     /tmp/cc02FOe0.s:88     .text.BusFault_Handler:00000000 $t
-     /tmp/cc02FOe0.s:94     .text.BusFault_Handler:00000000 BusFault_Handler
-     /tmp/cc02FOe0.s:111    .text.UsageFault_Handler:00000000 $t
-     /tmp/cc02FOe0.s:117    .text.UsageFault_Handler:00000000 UsageFault_Handler
-     /tmp/cc02FOe0.s:134    .text.SVC_Handler:00000000 $t
-     /tmp/cc02FOe0.s:140    .text.SVC_Handler:00000000 SVC_Handler
-     /tmp/cc02FOe0.s:153    .text.DebugMon_Handler:00000000 $t
-     /tmp/cc02FOe0.s:159    .text.DebugMon_Handler:00000000 DebugMon_Handler
-     /tmp/cc02FOe0.s:172    .text.PendSV_Handler:00000000 $t
-     /tmp/cc02FOe0.s:178    .text.PendSV_Handler:00000000 PendSV_Handler
-     /tmp/cc02FOe0.s:191    .text.SysTick_Handler:00000000 $t
-     /tmp/cc02FOe0.s:197    .text.SysTick_Handler:00000000 SysTick_Handler
-     /tmp/cc02FOe0.s:217    .text.EXTI15_10_IRQHandler:00000000 $t
-     /tmp/cc02FOe0.s:223    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
+     /tmp/ccM6OMw5.s:19     .text.NMI_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:25     .text.NMI_Handler:00000000 NMI_Handler
+     /tmp/ccM6OMw5.s:42     .text.HardFault_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:48     .text.HardFault_Handler:00000000 HardFault_Handler
+     /tmp/ccM6OMw5.s:65     .text.MemManage_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:71     .text.MemManage_Handler:00000000 MemManage_Handler
+     /tmp/ccM6OMw5.s:88     .text.BusFault_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:94     .text.BusFault_Handler:00000000 BusFault_Handler
+     /tmp/ccM6OMw5.s:111    .text.UsageFault_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:117    .text.UsageFault_Handler:00000000 UsageFault_Handler
+     /tmp/ccM6OMw5.s:134    .text.SVC_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:140    .text.SVC_Handler:00000000 SVC_Handler
+     /tmp/ccM6OMw5.s:153    .text.DebugMon_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:159    .text.DebugMon_Handler:00000000 DebugMon_Handler
+     /tmp/ccM6OMw5.s:172    .text.PendSV_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:178    .text.PendSV_Handler:00000000 PendSV_Handler
+     /tmp/ccM6OMw5.s:191    .text.SysTick_Handler:00000000 $t
+     /tmp/ccM6OMw5.s:197    .text.SysTick_Handler:00000000 SysTick_Handler
+     /tmp/ccM6OMw5.s:217    .text.TIM2_IRQHandler:00000000 $t
+     /tmp/ccM6OMw5.s:223    .text.TIM2_IRQHandler:00000000 TIM2_IRQHandler
+     /tmp/ccM6OMw5.s:243    .text.TIM2_IRQHandler:0000000c $d
+     /tmp/ccM6OMw5.s:248    .text.EXTI15_10_IRQHandler:00000000 $t
+     /tmp/ccM6OMw5.s:254    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
 
 UNDEFINED SYMBOLS
 HAL_IncTick
+HAL_TIM_IRQHandler
+htim2
 HAL_GPIO_EXTI_IRQHandler
