@@ -39,8 +39,9 @@
 
   (setup
     (pad_to_mask_clearance 0)
+    (aux_axis_origin 100 100)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
+      (layerselection 0x00010a8_7fffffff)
       (plot_on_all_layers_selection 0x0000000_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
@@ -53,7 +54,7 @@
       (plotframeref false)
       (viasonmask false)
       (mode 1)
-      (useauxorigin false)
+      (useauxorigin true)
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
@@ -69,7 +70,7 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
       (outputdirectory "")
     )
@@ -4092,9 +4093,9 @@
       (net 21 "Net-(J1-D+)") (pinfunction "D+") (pintype "bidirectional") (tstamp ca44217b-dc39-4fec-bee3-fa51513b86de))
     (pad "4" thru_hole circle (at 2 0 270) (size 1.6 1.6) (drill 0.95) (layers "*.Cu" "*.Mask")
       (net 2 "GND") (pinfunction "GND") (pintype "power_out") (tstamp 91244bb7-0b76-4864-a0fa-282147d210e7))
-    (pad "5" thru_hole circle (at 4.86 -7.25 270) (size 4 4) (drill 2.3) (layers "*.Cu" "*.Mask")
+    (pad "5" thru_hole circle (at 4.86 -7.25 270) (size 4 4) (drill oval 1 2.5) (layers "*.Cu" "*.Mask")
       (net 22 "Net-(J1-Shield)") (pinfunction "Shield") (pintype "passive") (tstamp 378da196-7f30-4d39-af7d-6e0290c9431b))
-    (pad "5" thru_hole circle (at 4.86 4.75 270) (size 4 4) (drill 2.3) (layers "*.Cu" "*.Mask")
+    (pad "5" thru_hole circle (at 4.86 4.75 270) (size 4 4) (drill oval 1 2.5) (layers "*.Cu" "*.Mask")
       (net 22 "Net-(J1-Shield)") (pinfunction "Shield") (pintype "passive") (tstamp 5d83521a-c05e-48a4-a0aa-3fdcb27e5221))
     (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_B_Lumberg_2411_02_Horizontal.wrl"
       (offset (xyz 0 0 0))
