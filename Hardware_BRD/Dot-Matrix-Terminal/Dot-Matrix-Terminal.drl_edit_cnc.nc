@@ -4,10 +4,10 @@
 (Type: G-code from Geometry)
 (Units: MM)
 
-(Created on Tuesday, 23 July 2024 at 17:53)
+(Created on Tuesday, 23 July 2024 at 18:06)
 
-(This preprocessor is the default preprocessor used by FlatCAM.)
-(It is made to work with MACH3 compatible motion controllers.)
+(This preprocessor is used with a motion controller loaded with GRBL firmware.)
+(It is configured to be compatible with almost any version of GRBL firmware.)
 
 
 (TOOLS DIAMETER: )
@@ -46,7 +46,8 @@
 (Z End: 15.0 mm)
 (X,Y End: None mm)
 (Steps per circle: 64)
-(Preprocessor Excellon: default)
+(Steps per circle: 64)
+(Preprocessor Excellon: GRBL_11_no_M6)
 
 (X range:    5.2500 ...   46.9500  mm)
 (Y range:    2.0000 ...  100.5000  mm)
@@ -54,19 +55,20 @@
 (Spindle Speed: 1000 RPM)
 G21
 G90
+G17
 G94
+
 
 G01 F100.00
 
-M5
+M5             
 G00 Z15.0000
-T1
 G00 X0.0000 Y0.0000                
-M6
+T1
 (MSG, Change to Tool Dia = 0.5000 ||| Total drills for tool T1 = 16)
 M0
 G00 Z15.0000
-
+        
 G01 F100.00
 M03 S1000
 G00 X5.5000 Y52.0000
@@ -135,15 +137,14 @@ G01 Z0
 G00 Z2.0000
 G01 F100.00
 
-M5
+M5             
 G00 Z15.0000
-T2
 G00 X0.0000 Y0.0000                
-M6
+T2
 (MSG, Change to Tool Dia = 1.0000 ||| Total drills for tool T2 = 43)
 M0
 G00 Z15.0000
-
+        
 G01 F100.00
 M03 S1000
 G00 X13.2780 Y42.4030
@@ -320,15 +321,14 @@ G01 Z0
 G00 Z2.0000
 G01 F100.00
 
-M5
+M5             
 G00 Z15.0000
-T3
 G00 X0.0000 Y0.0000                
-M6
+T3
 (MSG, Change to Tool Dia = 3.2000 ||| Total drills for tool T3 = 2)
 M0
 G00 Z15.0000
-
+        
 G01 F100.00
 M03 S1000
 G00 X7.5000 Y97.5000
