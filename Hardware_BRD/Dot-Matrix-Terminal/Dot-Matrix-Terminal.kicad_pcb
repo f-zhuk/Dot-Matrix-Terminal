@@ -41,7 +41,7 @@
     (pad_to_mask_clearance 0)
     (aux_axis_origin 100 150)
     (pcbplotparams
-      (layerselection 0x00010a8_7fffffff)
+      (layerselection 0x00410a8_7fffffff)
       (plot_on_all_layers_selection 0x0000000_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
@@ -4344,6 +4344,16 @@
     )
 
     (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (tstamp c317fb1c-393f-4749-aaea-7b3489dc7402))
+  (gr_line (start 114 53.14) (end 114 51.64)
+    (stroke (width 0.15) (type default)) (layer "User.1") (tstamp 12260f93-357e-4013-a9b7-b80ec8610cde))
+  (gr_line (start 142.75 56) (end 140.75 56)
+    (stroke (width 0.15) (type default)) (layer "User.1") (tstamp 53df7f0b-b86c-479f-9cd1-8ddef8207b5c))
+  (gr_line (start 126 53.14) (end 126 51.64)
+    (stroke (width 0.15) (type default)) (layer "User.1") (tstamp 570d27ab-9b01-4bda-a0b3-da1dcca179bd))
+  (gr_line (start 146.45 53.75) (end 146.45 52.25)
+    (stroke (width 0.15) (type default)) (layer "User.1") (tstamp 74a6cb94-f980-4219-91f1-334f28e50614))
+  (gr_line (start 142.75 50) (end 140.75 50)
+    (stroke (width 0.15) (type default)) (layer "User.1") (tstamp b7b97671-1175-4e45-a8e4-b67760df8c7a))
 
   (segment (start 120.999999 65) (end 121 63.569999) (width 0.5) (layer "F.Cu") (net 1) (tstamp 149c4c9b-20d4-4b0f-a294-227075bea379))
   (segment (start 118.475 65.555) (end 120.445 65.555) (width 0.5) (layer "F.Cu") (net 1) (tstamp 3fcf1fd2-22eb-4586-adee-32d159cf9f0a))
